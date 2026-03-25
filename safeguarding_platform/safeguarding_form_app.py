@@ -16,11 +16,22 @@ import plotly.graph_objects as go
 # Configuration
 # ---------------------------------------------------------
 
-load_dotenv(r"C:\Users\Alex\Documents\dissertation-ai\safeguarding_platform\.env")
+# Detect environment: cloud (Streamlit Community Cloud) or local
+IS_CLOUD = os.environ.get("STREAMLIT_SHARING_MODE") is not None or not os.path.exists(r"C:\Users\Alex")
 
-MODEL_DIR = r"C:\Users\Alex\Documents\dissertation-ai\safeguarding_platform\models\multitask_v3"
-DATABASE_URL = os.environ.get("DATABASE_URL")
-LOGO_PATH = r"C:\Users\Alex\Documents\dissertation-ai\safeguarding_platform\acf_logo.png"
+if IS_CLOUD:
+    DATABASE_URL = st.secrets["DATABASE_URL"]
+    HF_REPO = "aews12/safeguarding-multitask-v3"
+    LOGO_PATH = "acf_logo.png"
+
+    from huggingface_hub import snapshot_download
+    MODEL_DIR = snapshot_download(repo_id=HF_REPO, token=st.secrets.get("HF_TOKEN", None))
+else:
+    from dotenv import load_dotenv
+    load_dotenv(r"C:\Users\Alex\Documents\dissertation-ai\safeguarding_platform\.env")
+    DATABASE_URL = os.environ.get("DATABASE_URL")
+    MODEL_DIR = r"C:\Users\Alex\Documents\dissertation-ai\safeguarding_platform\models\multitask_v3"
+    LOGO_PATH = r"C:\Users\Alex\Documents\dissertation-ai\safeguarding_platform\acf_logo.png"
 
 with open(os.path.join(MODEL_DIR, "config.json"), "r") as f:
     model_config = json.load(f)
