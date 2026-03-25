@@ -1,0 +1,68 @@
+{
+  "model_name": "distilbert-base-uncased",
+  "num_urgency_labels": 4,
+  "num_category_labels": 12,
+  "urgency_labels": [
+    "Low",
+    "Medium",
+    "High",
+    "Critical"
+  ],
+  "category_labels": [
+    "Abuse by adult in organisation",
+    "Attendance / engagement",
+    "Behaviour / conduct",
+    "Bullying / peer conflict",
+    "Exploitation / trafficking",
+    "FGM / harmful practices",
+    "Financial hardship",
+    "Home issues / neglect",
+    "Mental health / self-harm",
+    "Online safety",
+    "Physical safety",
+    "Radicalisation / extremism"
+  ],
+  "label2id": {
+    "Low": 0,
+    "Medium": 1,
+    "High": 2,
+    "Critical": 3
+  },
+  "id2label": {
+    "0": "Low",
+    "1": "Medium",
+    "2": "High",
+    "3": "Critical"
+  },
+  "category2id": {
+    "Abuse by adult in organisation": 0,
+    "Attendance / engagement": 1,
+    "Behaviour / conduct": 2,
+    "Bullying / peer conflict": 3,
+    "Exploitation / trafficking": 4,
+    "FGM / harmful practices": 5,
+    "Financial hardship": 6,
+    "Home issues / neglect": 7,
+    "Mental health / self-harm": 8,
+    "Online safety": 9,
+    "Physical safety": 10,
+    "Radicalisation / extremism": 11
+  },
+  "id2category": {
+    "0": "Abuse by adult in organisation",
+    "1": "Attendance / engagement",
+    "2": "Behaviour / conduct",
+    "3": "Bullying / peer conflict",
+    "4": "Exploitation / trafficking",
+    "5": "FGM / harmful practices",
+    "6": "Financial hardship",
+    "7": "Home issues / neglect",
+    "8": "Mental health / self-harm",
+    "9": "Online safety",
+    "10": "Physical safety",
+    "11": "Radicalisation / extremism"
+  },
+  "max_length": 128,
+  "val_urgency_accuracy": 0.7208,
+  "val_category_accuracy": 0.8792
+}

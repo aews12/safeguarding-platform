@@ -1,0 +1,4 @@
+Model,Urgency Accuracy,Urgency F1 (macro),Category Accuracy,Category F1 (macro),Critical Recall
+TF-IDF + Logistic Regression,0.6267,0.6218,0.71,0.7083,0.64
+Multi-task DistilBERT v2 (1500 records),0.7333,0.7377,0.8133,0.8134,0.6533
+Multi-task DistilBERT v3 (3500 records),0.7686,0.7697,0.8414,0.8524,0.6971

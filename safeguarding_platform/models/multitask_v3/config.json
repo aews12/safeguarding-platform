@@ -1,0 +1,78 @@
+{
+  "model_name": "distilbert-base-uncased",
+  "num_urgency_labels": 4,
+  "num_category_labels": 15,
+  "urgency_labels": [
+    "Low",
+    "Medium",
+    "High",
+    "Critical"
+  ],
+  "category_labels": [
+    "Abuse by adult in organisation",
+    "Abuse by another young person",
+    "Attendance / engagement",
+    "Behaviour / conduct",
+    "Bullying / peer conflict",
+    "Exploitation / trafficking",
+    "FGM / harmful practices",
+    "Financial hardship",
+    "Grooming",
+    "Home issues / neglect",
+    "Mental health / self-harm",
+    "Online safety",
+    "Physical safety",
+    "Radicalisation / extremism",
+    "Sexual abuse / assault"
+  ],
+  "label2id": {
+    "Low": 0,
+    "Medium": 1,
+    "High": 2,
+    "Critical": 3
+  },
+  "id2label": {
+    "0": "Low",
+    "1": "Medium",
+    "2": "High",
+    "3": "Critical"
+  },
+  "category2id": {
+    "Abuse by adult in organisation": 0,
+    "Abuse by another young person": 1,
+    "Attendance / engagement": 2,
+    "Behaviour / conduct": 3,
+    "Bullying / peer conflict": 4,
+    "Exploitation / trafficking": 5,
+    "FGM / harmful practices": 6,
+    "Financial hardship": 7,
+    "Grooming": 8,
+    "Home issues / neglect": 9,
+    "Mental health / self-harm": 10,
+    "Online safety": 11,
+    "Physical safety": 12,
+    "Radicalisation / extremism": 13,
+    "Sexual abuse / assault": 14
+  },
+  "id2category": {
+    "0": "Abuse by adult in organisation",
+    "1": "Abuse by another young person",
+    "2": "Attendance / engagement",
+    "3": "Behaviour / conduct",
+    "4": "Bullying / peer conflict",
+    "5": "Exploitation / trafficking",
+    "6": "FGM / harmful practices",
+    "7": "Financial hardship",
+    "8": "Grooming",
+    "9": "Home issues / neglect",
+    "10": "Mental health / self-harm",
+    "11": "Online safety",
+    "12": "Physical safety",
+    "13": "Radicalisation / extremism",
+    "14": "Sexual abuse / assault"
+  },
+  "max_length": 128,
+  "val_urgency_accuracy": 0.7686,
+  "val_category_accuracy": 0.8414,
+  "training_records": 2800
+}
